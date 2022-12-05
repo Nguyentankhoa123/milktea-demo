@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Giỏ hàng</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="header_container d-flex justify-content-between align-items-center"
+            >
+              <div class="menu_bars">
+                <div class="menu-icon">
+                  <span class="line-1"></span>
+                  <span class="line-2"></span>
+                  <span class="line-3"></span>
+                </div>
+              </div>
+              <div class="header_logo">
+                <a href="#">
+                  <img src="images/logo2-removebg-preview.png" alt="" />
+                </a>
+              </div>
+              <div class="main_menu">
+                <nav>
+                  <div class="menu">
+                    <ul>
+                      <li>
+                        <a href="./index.html">MILKTEA & MACCHIATO</a>
+                      </li>
+                      <li>
+                        <a href="./aboutus.html">VỀ CHÚNG TÔI</a>
+                      </li>
+                      <li>
+                        <a href="./product.html">SẢN PHẨM</a>
+                      </li>
+                      <li>
+                        <a href="./news.html">TIN TỨC</a>
+                      </li>
+                      <li>
+                        <a href="./store.html">CỬA HÀNG</a>
+                      </li>
+                      <li>
+                        <a href="#" id="logout" onclick="logOut()">Đăng xuất</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+              <div class="navbar_menu">
+                <div class="auth_menu">
+                  <div class="login">
+                    <button>Đăng nhập</button>
+                  </div>
+                  <div class="register">
+                    <button>Đăng ký</button>
+                  </div>
+                </div>
+                <div class="cart">
+                  <a href="cart.html">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                  </a>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="id01" class="login-form">
+        <div class="login_form">
+          <div class="form_box">
+            <form name="signInForm" onsubmit="signIn()">
+              <h3 class="title_form">Đăng Nhập</h3>
+              <input
+                type="text"
+                class="input-field"
+                placeholder="Nhập tài khoản"
+                id="username"
+              />
+              <div class="input-password">
+                <input
+                  type="password"
+                  class="input-field"
+                  placeholder="Nhập mật khẩu"
+                  id="password"
+                />
+                <i class="fa-regular fa-eye"></i>
+                <i class="fa-regular fa-eye-slash showHide"></i>
+              </div>
+              <div class="check_box">
+                <input type="checkbox" class="check-box" /><span
+                  >Nhớ mật khẩu</span
+                >
+              </div>
+              <button type="submit" class="submit-btn">Đăng nhập</button>
+
+              <span class="sign_up"
+                >Chưa có tài khoản ?
+                <a href="#" id="signup-text">Tạo tài khoản</a>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="id02" class="register-form">
+        <div class="register_form">
+          <div class="form_box">
+            <form name="signUpForm" onsubmit="signUp()">
+              <h3 class="title_form">Đăng Ký</h3>
+              <input
+                type="text"
+                class="input-field"
+                placeholder="Số điện thoại"
+                id="phone"
+                required
+              />
+              <input
+                type="text"
+                class="input-field"
+                placeholder="Nhập tài khoản"
+                id="reg_username"
+                required
+              />
+              <input
+                type="text"
+                class="input-field"
+                placeholder="Nhập email"
+                id="email"
+                required
+              />
+
+              <input
+                type="password"
+                class="input-field"
+                placeholder="Nhập mật khẩu"
+                id="reg_password"
+                required
+              />
+              <input
+                type="password"
+                class="input-field"
+                placeholder="Nhập lại mật khẩu"
+                id="reg_rePassword"
+                required
+              />
+              <div class="check_box">
+                <input type="checkbox" class="check-box" /><span
+                  >Tôi đồng ý với điều khoản của cửa hàng</span
+                >
+              </div>
+              <button type="submit" class="submit-btn">Đăng Ký</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="page_banner"></section>
+
+    <section id="cart" class="container">
+      <table class="product_list" width="100%">
+        <thead>
+          <tr>
+            <td>Hình Ảnh</td>
+            <td>Tên sản phẩm</td>
+            <td>Số Lượng</td>
+            <td>Đơn giá</td>
+            <td>Thành Tiền</td>
+            <td>Xóa sản phẩm</td>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td><i class="fa-regular fa-circle-xmark"></i></td>
+            <td><img src="images/tra-xanh-xoai.jpg" alt="" /></td>
+            <td>Trà xanh xoài</td>
+            <td>
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+            </td>
+            <td>30.000đ</td>
+          </tr>
+          <tr>
+            <td><i class="fa-regular fa-circle-xmark"></i></td>
+            <td><img src="images/tra-xanh-xoai.jpg" alt="" /></td>
+            <td>Trà xanh xoài</td>
+            <td>
+              <button class="minus">-</button>
+              <span class="count">10</span>
+              <button class="plus">+</button>
+            </td>
+            <td>30.000đ</td>
+          </tr>
+          <tr>
+            <td><i class="fa-regular fa-circle-xmark"></i></td>
+            <td><img src="images/tra-xanh-xoai.jpg" alt="" /></td>
+            <td>Trà xanh xoài</td>
+            <td>
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+            </td>
+            <td>30.000đ</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="total_price" class="container">
+      <table class="product_total">
+        <!-- <tr>
+          <td>Tổng giá tiền</td>
+          <td>100.000</td>
+        </tr> -->
+      </table>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row main_footer">
+          <div class="col-12">
+            <div class="footer_inner">
+              <div class="row main_footer">
+                <div class="col-md-2 col-6 mb-4 footer_menu">
+                  <h4>VỀ CHÚNG TÔI</h4>
+                  <ul>
+                    <li>Khởi nguồn thương hiệu</li>
+                    <li>Trách nhiệm cộng đồng</li>
+                    <li>Lắng nghe và thấu hiểu</li>
+                    <li>Liên hệ với chúng tôi</li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6 mb-4 footer_menu">
+                  <h4>SẢN PHẨM</h4>
+                  <ul>
+                    <li>Macchiato</li>
+                    <li>Milktea</li>
+                    <li>Special</li>
+                    <li>Full-Topping</li>
+                    <li>Topping</li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6 mb-4 footer_menu">
+                  <h4>TIN TỨC</h4>
+                  <ul>
+                    <li>Khuyến mãi</li>
+                    <li>Tuyển dụng</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 mb-4 footer_contact footer_menu">
+                  <h4>MILKTEA & MACCHIATO</h4>
+                  <ul>
+                    <li>
+                      <img src="images/map-location.svg" alt="" /> Đường 3/2,
+                      Phường Xuân Khánh , Quận Ninh Kiều, Thành Phố Cần Thơ
+                    </li>
+                    <li>
+                      <img src="images/email.svg" alt="" />
+                      trasuaahihitea@gmail.com
+                    </li>
+                    <li><img src="images/call.svg" alt="" /> 0123 456 789</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 mb-4 footer_media">
+                  <h4>Kết nối với chúng tôi</h4>
+                  <ul>
+                    <li>
+                      <i class="fa-brands fa-facebook-f"></i
+                      ><span>Facebook</span>
+                    </li>
+                    <li>
+                      <i class="fa-brands fa-square-instagram"></i
+                      ><span>Instagram</span>
+                    </li>
+                    <li>
+                      <i class="fa-brands fa-twitter"></i><span>Twitter</span>
+                    </li>
+                    <li>
+                      <i class="fa-brands fa-youtube"></i><span>Youtube</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_bottom">
+          <div class="copyright">
+            <!-- &#169 Copyright 2022 Ahihi Tea - MilkTea & Macchiato -->
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="scrollUp"><i class="fa-solid fa-angles-up"></i></a>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/cart.js"></script>
+  </body>
+</html>

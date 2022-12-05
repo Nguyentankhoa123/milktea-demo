@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Cửa hàng</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="header_container d-flex justify-content-between align-items-center bottom-line"
+            >
+              <div class="menu_bars">
+                <!-- <i class="fa-solid fa-bars"></i> -->
+                <div class="menu-icon">
+                  <span class="line-1"></span>
+                  <span class="line-2"></span>
+                  <span class="line-3"></span>
+                </div>
+              </div>
+              <div class="header_logo">
+                <a href="#">
+                  <img src="images/logo2-removebg-preview.png" alt="" />
+                </a>
+              </div>
+              <div class="main_menu">
+                <nav>
+                  <div class="menu">
+                    <ul>
+                      <li>
+                        <a href="index.html">MILKTEA & MACCHIATO</a>
+                      </li>
+                      <li>
+                        <a href="aboutus.html">VỀ CHÚNG TÔI</a>
+                      </li>
+                      <li>
+                        <a href="product.html">SẢN PHẨM</a>
+                      </li>
+                      <li>
+                        <a href="news.html">TIN TỨC</a>
+                      </li>
+                      <li>
+                        <a href="store.html">CỬA HÀNG</a>
+                      </li>
+                      <li>
+                        <a href="#" id="logout" onclick="logOut()">Đăng xuất</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+              <div class="navbar_menu">
+                <div class="auth_menu">
+                  <div class="login">
+                    <button>Đăng nhập</button>
+                  </div>
+                  <div class="register">
+                    <button>Đăng ký</button>
+                  </div>
+                </div>
+                <div class="cart">
+                  <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="id01" class="login-form">
+        <div class="login_form">
+          <div class="form_box">
+            <form name="signInForm" onsubmit="signIn()">
+              <h3 class="title_form">Đăng Nhập</h3>
+              <input
+                type="text"
+                class="input-field"
+                placeholder="Nhập tài khoản"
+                id="username"
+              />
+              <div class="input-password">
+                <input
+                  type="password"
+                  class="input-field"
+                  placeholder="Nhập mật khẩu"
+                  id="password"
+                />
+                <i class="fa-regular fa-eye"></i>
+                <i class="fa-regular fa-eye-slash showHide"></i>
+              </div>
+              <div class="check_box">
+                <input type="checkbox" class="check-box" /><span
+                  >Nhớ mật khẩu</span
+                >
+              </div>
+              <button type="submit" class="submit-btn">Đăng nhập</button>
+
+              <span class="sign_up"
+                >Chưa có tài khoản ?
+                <a href="#" id="signup-text">Tạo tài khoản</a>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="id02" class="register-form">
+        <div class="register_form">
+          <div class="form_box">
+            <form name="signUpForm" onsubmit="signUp()">
+              <h3 class="title_form">Đăng Ký</h3>
+              <input
+                type="text"
+                class="input-field"
+                placeholder="Số điện thoại"
+                id="phone"
+                required
+              />
+              <input
+                type="text"
+                class="input-field"
+                placeholder="Nhập tài khoản"
+                id="reg_username"
+                required
+              />
+              <input
+                type="text"
+                class="input-field"
+                placeholder="Nhập email"
+                id="email"
+                required
+              />
+
+              <input
+                type="password"
+                class="input-field"
+                placeholder="Nhập mật khẩu"
+                id="reg_password"
+                required
+              />
+              <input
+                type="password"
+                class="input-field"
+                placeholder="Nhập lại mật khẩu"
+                id="reg_rePassword"
+                required
+              />
+              <div class="check_box">
+                <input type="checkbox" class="check-box" /><span
+                  >Tôi đồng ý với điều khoản của cửa hàng</span
+                >
+              </div>
+              <button type="submit" class="submit-btn">Đăng Ký</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="page_banner"></section>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <ul class="page_list">
+          <li>
+            <a href="index.html">Trang chủ</a>
+          </li>
+          <i class="fa-solid fa-angles-right"></i>
+          <li class="breadcrumb-item">
+            <a href="store.html">Cửa hàng</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="store">
+      <div class="container">
+        <div class="contact_info_desc mt-5">
+          <p>
+            Hệ thống cửa hàng AhihiTea Milktea &amp; Macchiato hiện nay đã có
+            mặt khắp các tỉnh và thành phố lớn, trong tương lai AhihiTea hứa hẹn
+            sẽ đến gần hơn với địa chỉ nhà bạn cũng như gần hơn với mong đợi về
+            một thức uống hoàn hảo của bạn, cùng Chin điểm qua một số địa điểm
+            tiêu biểu nhé:
+          </p>
+          <p class="contact_info_title text-center pt-md-5">Cần Thơ</p>
+        </div>
+        <div class="contact_info_address">
+          <div class="info_address">188C Đường 30 tháng 4</div>
+          <a
+            href="https://www.google.com/maps/place/Ti%E1%BB%87m+Tr%C3%A0+An+Vi%C3%AAn/@10.0276194,105.7773568,17z/data=!3m1!4b1!4m5!3m4!1s0x31a0893d36179d83:0xef07efd759cb0895!8m2!3d10.0276194!4d105.7773568?hl=vi-VN"
+            target="_blank"
+            class="store-direction"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i>
+            <h6>CHỈ ĐƯỜNG</h6></a
+          >
+        </div>
+        <div class="contact_info_address">
+          <div class="info_address">Vincom Xuân Khánh</div>
+          <a
+            href="https://www.google.com/maps/place/Gong+Cha+C%E1%BA%A7n+Th%C6%A1/@10.0254841,105.7754157,17z/data=!3m1!4b1!4m5!3m4!1s0x31a0882424d5f31b:0xc8fe22a878615286!8m2!3d10.0254841!4d105.7754157?hl=vi-VN"
+            target="_blank"
+            class="store-direction"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i>
+            <h6>CHỈ ĐƯỜNG</h6></a
+          >
+        </div>
+        <div class="contact_info_address">
+          <div class="info_address">51 Ngô Văn Sở, P. Tân An</div>
+          <a
+            href="https://www.google.com/maps/place/She's+Tea/@10.0339401,105.7830193,17z/data=!3m1!4b1!4m5!3m4!1s0x31a063cf96c8441f:0x4d456fd30d010488!8m2!3d10.0339239!4d105.7852066?hl=vi-VN&shorturl=1N"
+            target="_blank"
+            class="store-direction"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i>
+            <h6>CHỈ ĐƯỜNG</h6></a
+          >
+        </div>
+        <div class="contact_info_address">
+          <div class="info_address">11 Võ Văn Tần, P. Tân An</div>
+          <a
+            href="https://goo.gl/maps/nK5SdgZ8EKVtp2Am8"
+            target="_blank"
+            class="store-direction"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i>
+            <h6>CHỈ ĐƯỜNG</h6></a
+          >
+        </div>
+        <div class="contact_info_address">
+          <div class="info_address">327C Nguyễn Văn Cừ nối dài</div>
+          <a
+            href="https://goo.gl/maps/1gdcR7mnMQSvxuHW9"
+            target="_blank"
+            class="store-direction"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i>
+            <h6>CHỈ ĐƯỜNG</h6></a
+          >
+        </div>
+        <div class="contact_info_desc mt-5">
+          <p class="contact_info_title text-center pt-md-5">Vĩnh Long</p>
+        </div>
+        <div class="contact_info_address">
+          <div class="info_address">68/19 Đường Phạm Thái Bường</div>
+          <a
+            href="https://goo.gl/maps/E1uegNnMkdZy4Jch6"
+            target="_blank"
+            class="store-direction"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i>
+            <h6>CHỈ ĐƯỜNG</h6></a
+          >
+        </div>
+        <div class="contact_info_address">
+          <div class="info_address">55 A5 Phạm Thái Bường</div>
+          <a
+            href="https://goo.gl/maps/2SiDodoKATzm4xni7"
+            target="_blank"
+            class="store-direction"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i>
+            <h6>CHỈ ĐƯỜNG</h6></a
+          >
+        </div>
+        <div class="contact_info_address">
+          <div class="info_address">36B Phạm Thái Bường</div>
+          <a
+            href="https://g.page/trasuazeze?share"
+            target="_blank"
+            class="store-direction"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i>
+            <h6>CHỈ ĐƯỜNG</h6></a
+          >
+        </div>
+        <div class="contact_info_desc mt-5">
+          <p class="contact_info_title text-center pt-md-5">Trà Vinh</p>
+        </div>
+        <div class="contact_info_address">
+          <div class="info_address">28 Nguyễn Thái Học, Phường 1</div>
+          <a
+            href="https://goo.gl/maps/FpYwxSRVbqf95cRJA"
+            target="_blank"
+            class="store-direction"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i>
+            <h6>CHỈ ĐƯỜNG</h6></a
+          >
+        </div>
+        <div class="contact_info_address">
+          <div class="info_address">316 Phạm Ngũ Lão, Phường 1</div>
+          <a
+            href="https://goo.gl/maps/QrPAGitTWQmJSVCUA"
+            target="_blank"
+            class="store-direction"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i>
+            <h6>CHỈ ĐƯỜNG</h6></a
+          >
+        </div>
+        <div class="contact_info_address">
+          <div class="info_address">460 Đường Phạm Ngũ Lão, Phường 1</div>
+          <a
+            href="https://goo.gl/maps/zh1JpypLZJQkbi8o8"
+            target="_blank"
+            class="store-direction"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i>
+            <h6>CHỈ ĐƯỜNG</h6></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <script defer src="js/main.js"></script>
+  </body>
+</html>
