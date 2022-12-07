@@ -66,6 +66,6 @@ function sweetalertclick() {
     icon: "success",
     title: "Sản phẩm đã được thêm vào giỏ hàng",
     showConfirmButton: false,
-    // timer: 1500,
+    timer: 1000,
   });
 }

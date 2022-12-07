@@ -1055,6 +1055,7 @@ input:-webkit-autofill:focus {
 .blog {
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .blog_item:hover {
@@ -1142,6 +1143,11 @@ input:-webkit-autofill:focus {
 
 .hide {
   display: none;
+}
+
+.swal2-styled.swal2-confirm,
+.swal2-styled.swal2-cancel {
+  padding: 10px 25px;
 }
 
 /* Responsive */

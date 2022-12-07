@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.querySelector(".cart").style.display = "block";
     setUser(loginUser);
   }
+  if (getCount() == 0) {
+    document.querySelector(".pay").style.display = "none";
+  }
 });
 
 const updateCount = (newCount) => {
@@ -47,15 +50,28 @@ function productPrice(key) {
 
 const removeCart = (key) => {
   // Lay so luong san pham bi xoa
-  amount = cart.filter((e) => e.key == key)[0].count;
-  //Cap nhat lai tong so san pham
-  var newCount = getCount() - amount;
-  updateCount(newCount);
-  //Lay danh sach cac san pham con lai
-  cart = cart.filter((e) => e.key !== key);
-  //Cap nhat lai localStorage cart
-  localStorage.setItem("cart", JSON.stringify(cart));
-  location.reload();
+  Swal.fire({
+    title: "Xác nhận xóa sản phẩm",
+    text: "Bạn có muốn xóa sản phẩm khỏi giỏ hàng ?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#3085d6",
+    confirmButtonText: "Có",
+    cancelButtonText: "Không",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      amount = cart.filter((e) => e.key == key)[0].count;
+      //Cap nhat lai tong so san pham
+      var newCount = getCount() - amount;
+      updateCount(newCount);
+      //Lay danh sach cac san pham con lai
+      cart = cart.filter((e) => e.key !== key);
+      //Cap nhat lai localStorage cart
+      localStorage.setItem("cart", JSON.stringify(cart));
+      location.reload();
+    }
+  });
 };
 
 let total = 0;
@@ -86,11 +102,17 @@ productTotal.innerHTML += ` <tr>
 
 // Dat hang
 function pay() {
-  alert("Đặt hàng thành công");
-  localStorage.removeItem("cart");
-  localStorage.removeItem("cartsCount");
-  cartShow.textContent = 0;
-  location.reload();
+  Swal.fire({
+    icon: "success",
+    title: "Đặt hàng thành công",
+    showConfirmButton: false,
+    timer: 1000,
+  }).then(() => {
+    localStorage.removeItem("cart");
+    localStorage.removeItem("cartsCount");
+    cartShow.textContent = 0;
+    location.reload();
+  });
 }
 
 function minus(key) {
