@@ -11,6 +11,10 @@
   outline: none;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 button:focus {
   outline: unset !important;
 }
@@ -21,6 +25,16 @@ a:hover {
 
 p {
   margin-bottom: unset !important;
+}
+
+ul {
+  padding: 0 !important;
+}
+
+/* Remove background input */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
 }
 
 .scrollUp {
@@ -307,23 +321,6 @@ p {
   border-radius: 7px;
 }
 
-.best_seller {
-  position: absolute;
-  content: "";
-  background-color: #ec0000;
-  top: 5px;
-  right: 5px;
-  padding: 8px 15px 3px 13px;
-  text-align: center;
-  line-height: 20px;
-}
-
-.menu_post .best_seller img {
-  height: 17px;
-  width: 10px !important;
-  margin-bottom: 5px;
-}
-
 .menu_post img {
   width: 100%;
   margin-bottom: 25px;
@@ -424,172 +421,6 @@ p {
 .owl-item.active.center .outstanding_item .outstanding_info h3,
 .owl-item.active.center .outstanding_item .outstanding_info a {
   transform: translateY(0);
-}
-
-.network_img {
-  background-image: url(images/logo2-removebg-preview.png);
-  height: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-blend-mode: darken;
-  background-color: rgba(0, 0, 0, 0.71);
-}
-
-.network_desc {
-  padding: 50px 0;
-  width: 70%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 auto;
-  color: #fff;
-}
-
-.network_desc h3 {
-  font-size: 30px;
-  line-height: 30px;
-}
-
-.network_desc p {
-  font-size: 18px;
-  margin-top: 10px;
-  font-weight: lighter;
-  text-align: justify;
-}
-
-.works_slide {
-  padding: 100px 0;
-}
-
-.slider-item-one {
-  background-image: url(images/one.jpg);
-  background-position: center;
-  background-size: auto 250px;
-  background-repeat: no-repeat;
-  height: 290px;
-  display: block;
-  position: relative;
-}
-
-.slider-item-two {
-  background-image: url(images/two.jpg);
-  background-position: center;
-  background-size: auto 250px;
-  background-repeat: no-repeat;
-  height: 290px;
-  display: block;
-}
-
-.slider-item-three {
-  background-image: url(images/three.jpg);
-  background-position: center;
-  background-size: auto 250px;
-  background-repeat: no-repeat;
-  height: 290px;
-  display: block;
-}
-
-.slider-item-four {
-  background-image: url(images/four.jpg);
-  background-position: center;
-  background-size: auto 250px;
-  background-repeat: no-repeat;
-  height: 290px;
-  display: block;
-}
-
-.slider-item-five {
-  background-image: url(images/five.jpg);
-  background-position: center;
-  background-size: auto 250px;
-  background-repeat: no-repeat;
-  height: 290px;
-  display: block;
-}
-
-.slider-item-six {
-  background-image: url(images/six.jpg);
-  background-position: center;
-  background-size: auto 250px;
-  background-repeat: no-repeat;
-  height: 290px;
-  display: block;
-}
-
-.slider-item-seven {
-  background-image: url(images/seven.jpg);
-  background-position: center;
-  background-size: auto 250px;
-  background-repeat: no-repeat;
-  height: 290px;
-  display: block;
-}
-
-.slider-item-eight {
-  background-image: url(images/eight.jpg);
-  background-position: center;
-  background-size: auto 250px;
-  background-repeat: no-repeat;
-  height: 290px;
-  display: block;
-}
-
-.slider-item-nine {
-  background-image: url(images/nine.jpg);
-  background-position: center;
-  background-size: auto 250px;
-  background-repeat: no-repeat;
-  height: 290px;
-  display: block;
-}
-
-.store_address {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  font-size: 18px;
-  text-align: left;
-  width: 100%;
-  background: linear-gradient(to top, #000, transparent);
-  padding: 10% 120px 15px 20px;
-  color: #fff;
-}
-
-.store_direction {
-  position: absolute;
-  content: "";
-  right: 10px;
-  bottom: 15px;
-  display: flex;
-  background-color: #ffd400;
-  padding: 8px 8px 0 6px;
-  transition: 0.2s;
-}
-
-.store_direction:hover {
-  background-color: #1a1a1a;
-}
-
-.store_direction i {
-  font-size: 12px;
-  color: #000;
-  margin-right: 4px;
-  margin-top: -1px;
-  transition: 0.2s;
-}
-
-.store_direction h6 {
-  color: #000;
-  font-size: 10px;
-  transition: 0.2s;
-}
-
-.store_direction:hover i,
-.store_direction:hover h6 {
-  color: #fff;
 }
 
 /* Footer */
@@ -734,6 +565,7 @@ p {
 .breadcrumb {
   margin-bottom: 0;
   background-color: #f3f5f5;
+  padding: 10px 0 !important;
 }
 
 .page_list {
@@ -930,7 +762,7 @@ p {
   transform: translateY(-10px);
 }
 
-/* Cart */
+/* Giỏ hàng */
 
 #cart {
   margin-top: 20px;
@@ -1076,7 +908,7 @@ p {
   padding-top: 10px;
 }
 
-/* About us */
+/* Về Chúng Tôi */
 
 .blog_header h2 {
   color: #ffb503;
@@ -1092,7 +924,7 @@ p {
   font-weight: lighter;
 }
 
-/* Store */
+/* Cửa hàng */
 
 .contact_info_desc p {
   text-align: justify;
@@ -1219,6 +1051,11 @@ p {
   overflow: hidden;
 }
 
+.blog {
+  display: flex;
+  flex-direction: column;
+}
+
 .blog_item:hover {
   box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.1);
 }
@@ -1306,6 +1143,8 @@ p {
   display: none;
 }
 
+/* Responsive */
+
 @media screen and (max-width: 1024px) {
   .header_navbar {
     display: none;
@@ -1368,12 +1207,8 @@ p {
   .menu_bars {
     display: block;
     margin: 0;
-    width: 155px;
+    width: 170px;
     margin-top: 8px;
-  }
-
-  .auth_menu {
-    width: 115px;
   }
 
   #logout {
@@ -1412,7 +1247,8 @@ p {
     font-size: 50px;
   }
 
-  .auth_menu {
+  .auth_menu,
+  .menu_bars {
     width: 150px;
   }
 
@@ -1426,6 +1262,10 @@ p {
 
   .menu {
     padding: 0 20px 0 20px;
+  }
+
+  .swal2-title {
+    font-size: 23px !important;
   }
 
   .product_title button {
@@ -1510,10 +1350,6 @@ p {
     font-size: 14px;
   }
 
-  .product_item {
-    margin: 0 18px;
-  }
-
   .blog_header h2 {
     font-size: 35px;
   }
@@ -1542,7 +1378,7 @@ p {
   }
 
   .swal2-title {
-    font-size: 22px !important;
+    font-size: 20px !important;
   }
 
   #cart table tbody td img {
@@ -1574,10 +1410,4 @@ p {
   .footer_bottom .copyright {
     font-size: 14px;
   }
-}
-
-/* Remove background input */
-input:-webkit-autofill,
-input:-webkit-autofill:focus {
-  transition: background-color 600000s 0s, color 600000s 0s;
 }
