@@ -527,6 +527,7 @@ input:-webkit-autofill:focus {
   letter-spacing: 2px;
   text-align: center;
   padding-bottom: 20px;
+  white-space: nowrap;
 }
 
 .footer_bottom .copyright span {
@@ -1408,6 +1409,6 @@ input:-webkit-autofill:focus {
   }
 
   .footer_bottom .copyright {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
