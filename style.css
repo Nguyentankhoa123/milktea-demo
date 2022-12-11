@@ -344,6 +344,7 @@ input:-webkit-autofill:focus {
   padding: 0 20px;
   font-size: 17px;
   font-weight: 300;
+  text-align: justify;
 }
 
 .menu_post .price {
@@ -770,6 +771,12 @@ input:-webkit-autofill:focus {
   overflow-x: auto;
 }
 
+#cart .text-center h2 {
+  color: #ffb503;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
 #cart table thead {
   border: 1px solid #e2e9e1;
   border-left: none;
@@ -800,10 +807,6 @@ input:-webkit-autofill:focus {
 
 .pay {
   cursor: pointer;
-}
-
-.cart {
-  display: none;
 }
 
 .image_user {
@@ -1290,7 +1293,7 @@ input:-webkit-autofill:focus {
 
   .cart {
     position: fixed !important;
-    bottom: 100px;
+    bottom: 200px;
     right: 20px;
     width: 60px;
     height: 60px;
@@ -1309,6 +1312,9 @@ input:-webkit-autofill:focus {
     height: 24px;
     line-height: 24px;
     right: -4px;
+  }
+  .search-btn {
+    display: none;
   }
 }
 
@@ -1417,4 +1423,24 @@ input:-webkit-autofill:focus {
   .footer_bottom .copyright {
     font-size: 12px;
   }
+
+  .search-btn {
+    display: none;
+  }
+}
+
+.search-input {
+  width: 0;
+  font-size: 18px;
+}
+
+.show-input {
+  width: 150px;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+
+.search-btn i {
+  color: #fff;
+  cursor: pointer;
 }

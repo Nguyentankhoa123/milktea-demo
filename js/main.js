@@ -1,7 +1,7 @@
 const activePage = window.location.pathname;
 const navLinks = document.querySelectorAll("nav a");
-const foodTitle = document.querySelectorAll(".product_title button");
-const foodList = document.querySelectorAll(".product_item");
+// const foodTitle = document.querySelectorAll(".product_title button");
+// const foodList = document.querySelectorAll(".product_item");
 const login = document.querySelector(".login button");
 const register = document.querySelector(".register button");
 const modal1 = document.getElementById("id01");
@@ -132,24 +132,6 @@ window.addEventListener("scroll", () => {
 window.addEventListener("scroll", () => {
   const scrollUp = document.querySelector(".scrollUp");
   scrollUp.classList.toggle("active", window.scrollY > 20);
-});
-
-foodTitle.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const type = e.target.getAttribute("type-food");
-    document
-      .querySelector(".product_title button.show")
-      .classList.remove("show");
-    e.target.classList.add("show");
-
-    foodList.forEach((item) => {
-      if (type == "all" || item.getAttribute("type-food") == type) {
-        item.classList.remove("hide");
-      } else {
-        item.classList.add("hide");
-      }
-    });
-  });
 });
 
 /* Login */

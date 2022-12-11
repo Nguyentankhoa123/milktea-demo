@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="Shortcut Icon" type="image/png" href="images/logo2-removebg-preview.png">
+
+    <!-- Thư viện -->
     <link
       href="bootstrap-5.0.2-dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -90,7 +92,11 @@
                     <i class="fa-solid fa-basket-shopping"></i>
                   </a>
                   <span></span>
-                </div>
+                </div>      
+              </div>
+              <div class="search-btn">
+                <input type="text" class="search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
               </div>
             </div>
           </div>
@@ -232,7 +238,7 @@
             >
               <div class="menu_post">
                 <img src="images/chocolate.jpg" alt="Trà sữa Chocolate" />
-                <h3>Trà sữa Chocolate</h3>
+                <h3 class="product-name">Trà sữa Chocolate</h3>
                 <p class="desc">
                   Chocolate đăng đắng kết hợp cùng Sữa ngot ngào, không chỉ giúp
                   làm xua đi cảm giác ''khó chịu vô lý'' mà còn tăng hứng khởi
@@ -251,7 +257,7 @@
             >
               <div class="menu_post">
                 <img src="images/trasuavinhai.jpg" alt="Trà sữa vị nhài" />
-                <h3>Trà Sữa Vị Nhài</h3>
+                <h3 class="product-name">Trà Sữa Vị Nhài</h3>
                 <p class="desc">
                   Trà nhài là một trong những vị được lòng khách hàng nhất với
                   vị thanh mát, hơi chát đặc trưng của lá trà xanh quyện trong
@@ -270,7 +276,7 @@
                   src="images/Tra-dao-buoi-hong-tran-chau-baby.jpg"
                   alt="Trà đào bưởi hồng trân châu"
                 />
-                <h3>Trà Đào Bưởi Hồng Trân Châu</h3>
+                <h3 class="product-name">Trà Đào Bưởi Hồng Trân Châu</h3>
                 <p class="desc">
                   Trà Đào Bưởi Hồng Trân Châu ghi điểm với vị ngọt thanh, chua
                   chua từ mứt đào, mứt bưởi kết hợp với vị thanh mát của trà
@@ -289,7 +295,7 @@
             >
               <div class="menu_post">
                 <img src="images/Tra-Xanh-2.jpg" alt="Trà Xanh" />
-                <h3>Trà Xanh</h3>
+                <h3 class="product-name">Trà Xanh</h3>
                 <p class="desc">
                   Trà xanh là loại thức uống tốt cho sức khỏe. Dùng trà xanh
                   thường xuyên sẽ giúp bạn thanh lọc cơ thể, thải độc tố hiệu
@@ -308,7 +314,7 @@
             >
               <div class="menu_post">
                 <img src="images/trasuaolong.jpg" alt="Trà sữa Ô Long" />
-                <h3>Trà sữa Ô Long</h3>
+                <h3 class="product-name">Trà sữa Ô Long</h3>
                 <p class="desc">
                   Trà Ô Long có được các lớp hương thơm và vị hết sức phong phú,
                   phức tạp hơn nhiều so với trà xanh, vị chát rất mềm và mượt,
@@ -324,7 +330,7 @@
             <div class="col-lg-3 col-sm-6 mt-3 product_item" type-food="fruit">
               <div class="menu_post">
                 <img src="images/traduanhietdoi.jpg" alt="Trà dứa nhiệt đới" />
-                <h3>Trà Dứa Nhiệt Đới</h3>
+                <h3 class="product-name">Trà Dứa Nhiệt Đới</h3>
                 <p class="desc">
                   Trà Dứa Nhiệt Đới với sự kết hợp của Mứt Dứa chua thơm cùng
                   Thạch Dừa dai ngọt, dùng cùng trà thanh mát vô cùng. Ly này có
@@ -340,7 +346,7 @@
             <div class="col-lg-3 col-sm-6 mt-3 product_item" type-food="fruit">
               <div class="menu_post">
                 <img src="images/tra-xanh-xoai.jpg" alt="Trà xanh xoài" />
-                <h3>Trà Xanh Xoài</h3>
+                <h3 class="product-name">Trà Xanh Xoài</h3>
                 <p class="desc">
                   Trà xanh xoài - một sự kết hợp tinh tế giữa vị trà đậm với vị
                   thơm ngọt của xoài. Tất cả hòa quyện và tạo nên một hương vị
@@ -359,7 +365,7 @@
                   src="images/O-Long-xoai-kem-coffee.jpg"
                   alt="Ô Long Xoài Kem Cà Phê"
                 />
-                <h3>Ô Long Xoài Kem Cà Phê</h3>
+                <h3 class="product-name">Ô Long Xoài Kem Cà Phê</h3>
                 <p class="desc">
                   Ô long Organic Mộc Châu kết hợp cùng với xoài tươi ngon ngọt
                   hòa quyện với lớp kem café sánh mịn.
@@ -377,7 +383,7 @@
                   src="images/hong-tra-buoi-mat-ong.jpg"
                   alt="Ô Long Xoài Kem Cà Phê"
                 />
-                <h3>Hồng Trà Bưởi Mật Ong</h3>
+                <h3 class="product-name">Hồng Trà Bưởi Mật Ong</h3>
                 <p class="desc">
                   Hương hồng trà quyện cùng hương bưởi cùng điểm nhấn hoàn thiện
                   cho sản phẩm là nốt ngọt thanh của mật ong
@@ -395,7 +401,7 @@
                   src="images/sua-chua-man-hat-sen-.png"
                   alt="Sữa chua mận hạt sen"
                 />
-                <h3>Sữa chua mận hạt sen</h3>
+                <h3 class="product-name">Sữa chua mận hạt sen</h3>
                 <p class="desc">
                   Với hương vị thơm ngon - sảng khoái - mới mẻ - giàu dưỡng
                   chất, bộ đôi sản phẩm chính là đồ uống "chân ái" dành cho
@@ -418,7 +424,7 @@
                   src="images/machiaototranchau.jpg"
                   alt="Trà sữa Macchiato Trân Châu"
                 />
-                <h3>Trà Sữa Macchiato Trân Châu</h3>
+                <h3 class="product-name">Trà Sữa Macchiato Trân Châu</h3>
                 <p class="desc">
                   Ngào ngạt hương thơm của trà và vị thanh béo của sữa, quyện
                   cùng lớp foarm sánh mịn, ngọt ngào. Là thức uống luôn được các
@@ -440,7 +446,7 @@
                   src="images/dautamkemphomai.jpg"
                   alt="Dâu tằm kem phô mai"
                 />
-                <h3>Dâu Tằm Kem Phô Mai</h3>
+                <h3 class="product-name">Dâu Tằm Kem Phô Mai</h3>
                 <p class="desc">
                   Trà sữa dâu tằm kem phô mai hương vị chua ngọt, béo ngậy đặc
                   trưng thơm ngon mang đến một hành trình trải nghiệm mới lạ cho
@@ -462,7 +468,7 @@
                   src="images/machiaototranchau.jpg"
                   alt="Trà sữa Macchiato Trân Châu"
                 />
-                <h3>Trà Xanh Kem Phô Mai</h3>
+                <h3 class="product-name">Trà Xanh Kem Phô Mai</h3>
                 <p class="desc">
                   Kem phô mai mằn mặn ngậy béo hòa cùng Trà xanh Organic vị nhài
                   và vị sữa béo ngậy hài hòa
@@ -480,7 +486,7 @@
             >
               <div class="menu_post">
                 <img src="images/matchadaudo.jpg" alt="Trà sữa Matcha Đậu Đỏ" />
-                <h3>Matcha Đậu Đỏ</h3>
+                <h3 class="product-name">Matcha Đậu Đỏ</h3>
                 <p class="desc">
                   Vị chát của trà xanh Nhật Bản (Matcha) pha chút ngọt ngào của
                   sữa dùng kèm Đậu Đỏ bùi và béo sẽ làm bạn bất ngờ
@@ -498,7 +504,7 @@
             >
               <div class="menu_post">
                 <img src="images/matcha.jpg" alt="Trà sữa Matcha" />
-                <h3>Trà sữa Matcha</h3>
+                <h3 class="product-name">Trà sữa Matcha</h3>
                 <p class="desc">
                   Vị Trà Xanh nhẫn, đậm len lỏi vào mọi giác quan ngay từ những
                   ngụm đầu tiên, tạo cảm giác tươi mới sảng khoái chỉ muốn
@@ -520,7 +526,7 @@
                   src="images/chanchauhoanggia.jpg"
                   alt="Trà Sữa Chân Trâu Hoàng Gia"
                 />
-                <h3>Trà Sữa Chân Trâu Hoàng Gia</h3>
+                <h3 class="product-name">Trà Sữa Chân Trâu Hoàng Gia</h3>
                 <p class="desc">
                   Trân châu Hoàng Gia có hương vị ngọt nhẹ, bùi bùi, nhai giòn
                   giòn chứ không dai những những loại trân châu khác và là sự
@@ -540,7 +546,7 @@
             >
               <div class="menu_post">
                 <img src="images/jellydao.jpg" alt="Jelly Đào" />
-                <h3>Jelly Đào</h3>
+                <h3 class="product-name">Jelly Đào</h3>
                 <p class="desc">
                   Chàng lính ngự lâm Jelly Đào mang sắc cam bắt mắt, vị Đào lan
                   tỏa, trông chắc nịch nhưng lại vô cùng mềm mại, luôn tạo hứng
@@ -559,7 +565,7 @@
             >
               <div class="menu_post">
                 <img src="images/cunang.jpg" alt="Củ năng" />
-                <h3>Củ năng</h3>
+                <h3 class="product-name">Củ năng</h3>
                 <p class="desc">
                   Chàng kỵ sĩ Củ Năng ngọt thanh, giòn giòn được khoác lên mình
                   một chiếc giáp xanh nhạt hương lá dứa ngào ngạt, khiến bất kỳ
@@ -578,7 +584,7 @@
             >
               <div class="menu_post">
                 <img src="images/khucbach.jpg" alt="Khúc Bạch" />
-                <h3>Khúc Bạch</h3>
+                <h3 class="product-name">Khúc Bạch</h3>
                 <p class="desc">
                   Nàng công chúa Khúc Bạch Tuyết với vẻ ngoài trắng nõn nà, thơm
                   hương sữa tươi và đặc biệt mềm mại luôn thu hút mọi ánh nhìn.
@@ -599,7 +605,7 @@
                   src="images/tranchauhoangkim.jpg"
                   alt="Trân Châu Hoàng Kim"
                 />
-                <h3>Trân Châu Hoàng Kim</h3>
+                <h3 class="product-name">Trân Châu Hoàng Kim</h3>
                 <p class="desc">
                   Dẻo dai - óng ánh - thơm hương Đào là điểm hấp dẫn, mê hoặc
                   thực khách của cô em Trân Châu Hoàng Kim.

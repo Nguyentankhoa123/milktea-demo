@@ -69,3 +69,52 @@ function sweetalertclick() {
     timer: 1000,
   });
 }
+
+const foodTitle = document.querySelectorAll(".product_title button");
+const foodList = document.querySelectorAll(".product_item");
+
+foodTitle.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const type = e.target.getAttribute("type-food");
+    document
+      .querySelector(".product_title button.show")
+      .classList.remove("show");
+    e.target.classList.add("show");
+
+    foodList.forEach((item) => {
+      if (type == "all" || item.getAttribute("type-food") == type) {
+        item.classList.remove("hide");
+      } else {
+        item.classList.add("hide");
+      }
+    });
+  });
+});
+
+/* Search */
+document.querySelector(".search-input").addEventListener("keypress", () => {
+  let searchInput = document.querySelector(".search-input").value;
+  let elements = document.querySelectorAll(".product-name");
+  let foodList = document.querySelectorAll(".product_item");
+
+  elements.forEach((element, index) => {
+    if (element.innerText.toUpperCase().includes(searchInput.toUpperCase())) {
+      foodList[index].classList.remove("hide");
+    } else {
+      foodList[index].classList.add("hide");
+    }
+  });
+});
+
+const iconSearch = document.querySelector(".fa-magnifying-glass");
+const searchIcon = document.querySelector(".search-input");
+window.addEventListener("click", (e) => {
+  if (e.target == iconSearch) {
+    searchIcon.classList.toggle("show-input");
+  } else {
+    searchIcon.classList.remove("show-input");
+  }
+  if (e.target == searchIcon) {
+    searchIcon.classList.add("show-input");
+  }
+});
